@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //funcation is a reuseable code of block
+        function funcation1()
+        {   //this is function body is only crate function not run the code insid
+            console.log('hello');
+            console.log(2+2);       //this is code between funcation  
+        }
+        funcation1();  // by reuse propaety we can print funcatio many times 
+        funcation1(); // this konwn as runing function,calling function and access funcation 
+        
+        // parameter is use to give value to funcation it work like veriabales 
+        function calculateTex(parameter){
+            console.log(parameter * 2);
+        }
+        calculateTex(30); //30 is parameters value 
+        calculateTex(50); //50 is parameters value its reuse able
+
+        // at one funcation we can pass 2 or more pera-meters
+        function costTex(value,parcent) {
+            console.log(value * parcent + 2);
+        }
+        
+    </script>
+</body>
+</html>
