@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //object is group of multipal value together 
+        const product = {
+            //name and price is property and can acceses by theair name line no 17&18s
+            name: 'sockes',
+            price: 50
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price); // this is dot notetion
+
+        console.log(product['name']); //this altarnetive way to print any objects thish is breket notation
+
+        product.name = "cotton sockes" //object name can be changeable
+        console.log(product)
+
+        product.iteam = 'shirt' //new property can be add on objects 
+        console.log(product);
+
+        delete product.iteam; //by useing deleat key-word we can delate any objects w
+        console.log(product);
+
+        //bracket noteation
+        const product1 = {
+            name: 'paint',
+            ['delevary-time']: 'morning', //bracket dontenation we use this condtion whear - beasuse js though math
+            //if we have sting between breket than []is optional
+            'price-1': 100,
+            rating: {
+                stars: 4.5, //this is nestred objecct obj inside obje 
+                count: 65
+            },
+            fun: function value(){
+                console.log('funcation inside object');
+            }
+        }
+
+ console.log(product1);
+            console.log(product1.rating.stars);
+            product1.fun(); // funcation inside object is a mathode ex math.random math  is object and random is funcation it make a mathode;
+
+//JSN
+console.log(JSON.stringify (product1));
+JSON.parse(JSON.stringify (product1));
+
+const jsonString = JSON.stringify (product1); //HELP java script obj to json 
+console.log (JSON.parse(jsonString));
+
+//OBJECT OTHER PROPERTY
+ console.log('hello')
+    </script>
+</body>
+
+</html>
