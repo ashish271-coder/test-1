@@ -57,7 +57,52 @@ const jsonString = JSON.stringify (product1); //HELP java script obj to json
 console.log (JSON.parse(jsonString));
 
 //OBJECT OTHER PROPERTY
- console.log('hello')
+ console.log('ashish singh dawan'.length); //18
+ console.log('ashish' .toUpperCase()); //ASHISH
+
+//object are refrance
+
+        const obj1 = {
+            message: 'hello'
+        };
+        const firstobj = obj1.message
+        const objCopy = obj1;  //we copy object refrance and print in line no 74
+                                    //this part of refrance copy
+        obj1.message ='well done';
+        
+        console.log(obj1);
+        console.log(objCopy);
+
+        const obj2 = {
+            message: 'well done'
+        };
+        console.log(obj1 === obj2); // it retur false ite address diffrent forn  obj1 even kay value is same 
+        console.log(obj1 === objCopy); //it return both object value refrance in same addres 
+        console.log(obj1.message) ;   
+        //if i want print first message hello li need make it new object and store obj1 value in other object line 68
+        console.log(firstobj);
+
+        const obj3 = {
+            message: 'well done',
+            price: 100
+        };
+        // const message = obj3.message;  $ // if variable and property name are same than a short cut next line 
+        const { message,price } = obj3; //its distructuring easir way take property  out from  obj
+        console .log(message+'\n'+price);
+        
+         const obj4 = {
+            //message:message
+            message,
+        //    method: function funcation1() {     $ This is shorthand method
+        //     console.log('method');
+        //    }
+            method(){
+                console.log('method-2'); //this is short cut for shorthand method 
+            }
+        };
+        console.log(obj4);
+        obj4.method();
+
     </script>
 </body>
 
