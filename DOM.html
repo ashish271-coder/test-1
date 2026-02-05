@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+
+    <button>hi</button>
+    <button class="sec">bro</button>
+    <script>
+ /**
+        console.log(document.title);             //DOM combine HTML &js toghther
+       document.title ='change';
+         console.log(document.title);
+        
+
+       //DOM stand for document object modle
+        
+       document.body.innerHTML = 'hello';  //it replace button hi to hello
+       document.title = 'good job'; // it change title name
+       
+
+        console.log(document.body);
+         console.log(typeof document.body); //the html element body convert into js object
+
+         console.log(document.body.innerHTML);  //control whole HTML body & it print whole body code
+        document.body.innerHTML ='change';
+  */      
+
+       console.log(document.querySelector('button').innerHTML);
+       document.querySelector('button')
+        .innerHTML = 'changed';
+
+
+      console.log(document.querySelector('.sec')); //html element are js obhect obje =value;
+       const butElement = document.querySelector('.sec');
+       console.log(butElement);
+  </script>
+</body>
+</html>
