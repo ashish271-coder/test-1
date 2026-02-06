@@ -1,0 +1,72 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dom-project</title>
+    </head>
+    <body>
+        <p>YOUTUBE SUBSCRIBE</p>
+    <button onclick="
+    const subButtion = document.querySelector('.jsButton');
+    if(subButtion.innerText ==='subscribe'){ //(subButtion.innerHTML === 'subscribe')  innerText is html element
+        subButtion.innerHTML ='SUBSCRIBED';
+    }
+    else if(subButtion.innerHTML ==='SUBSCRIBED'){
+        subButtion.innerHTML ='Thanxx';  
+    }
+    else{
+        subButtion.innerHTML ='subscribe';
+    }
+    " class="jsButton">subscribe</button>
+        
+    <button onclick="follow()" class="followButton">follow</button>   <!--on click called funcation  -->
+    <!-- CALCULATE NO -->
+    <P>amzon shipping order</P>
+    <input placeholder="cost of product" class="js-input-cost" onkeydown=" handlekey (Event)
+    //  console.log('typing...');
+
+       /* console.log(event.key);
+        if (event.key ==='Enter'){
+            calculate()
+        }*/
+    ">
+    <!-- it's void element it did not need closeing teg -->
+    <button onclick="calculate()">calculate</button>
+    <p class="js-costResult"></p>
+        <script>
+            //FOR MAKEING CODE CLEAN  
+        /* hear we made a follow button by helping funcation 
+            it make code clean and easeyy */
+            function follow() {
+                const followButton = document.querySelector('.followButton');
+    if(followButton.innerText ==='follow'){ //(subButtion.innerHTML === 'subscribe')  innerText is html element
+        followButton.innerHTML ='FOLLOD';
+    }
+
+    else{
+        followButton.innerHTML ='follow';
+    }
+            }
+    //this funcation for amzone shipping order line no25
+    function calculate(){
+    const add = document.querySelector('.js-input-cost');
+    let cost= Number(add.value);    // we also use a shortcut like this "+add.value";
+    console.log(cost);
+    console.log(typeof cost); //before use of Number key-word in line no 46 it will string
+    
+    if(cost < 40) {
+        cost = cost + 10;
+        // console.log(cost);
+    }
+    document.querySelector('.js-costResult').innerHTML = `$${cost}`;
+    }
+    function handlekey(Event){
+        if (event.key ==='Enter'){
+            calculate()
+    }
+    }
+        </script>
+
+    </body>
+    </html>
