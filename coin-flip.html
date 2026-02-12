@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Onhead()
+    console.log('head');
+    " class="head">head </button>
+    <button onclick="ontails()
+         console.log('tails');
+    " class="tails">tails</button>
+    <p class="js-result"></p>
+
+<input type="text "class="show-name
+
+" placeholder="enter your name">
+<button onclick="showName()">submite</button>
+<p class="js-p"></p>
+        
+
+<input type="text" class="show-name1" onkeyup="handlekey()">
+<p class="js-linee"></p>
+</body>
+<script> 
+function Onhead(){
+  document.querySelector('.head');
+   document.querySelector('.js-result').innerText =
+    "You chose Head";
+}
+function ontails(){
+    document.querySelector('.tails');
+     document.querySelector('.js-result').innerText =
+    "You chose Tails";
+}
+function showName(){
+ let name = document.querySelector('.show-name').value;
+document.querySelector('.js-p').innerHTML=`your name is ${name}`;
+} 
+ function handlekey(){
+let liveChar = document.querySelector('.show-name1').value;
+document.querySelector('.js-linee').innerHTML=`${liveChar}`;
+
+ }
+
+</script>
+</html>
