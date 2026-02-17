@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const myArray=[10,20,30];
+    console.log(myArray);
+   console.log(myArray[2]); //thsi is indexing in array  on postion 2 will print 30
+
+   myArray[2]=69;
+   console.log(myArray);
+
+   [1,'hello',true,{name: 'socks'},[1,2]]; //in js arry can be mixed 
+   console.log (typeof[1,2]);
+   console.log(Array.isArray([1,2]));
+   console.log(Array.isArray('hello'));
+
+   console.log(myArray.length);//it show how many elements in my array
+
+   myArray.push(100);   // it push element end of array
+   console.log(myArray);
+
+   myArray.splice(0,1); //splice is ysed for remove element from array in bracket 0 is indexing and 1 is num want data remove
+    console.log(myArray);
+    </script>
+    
+</body>
+</html>
