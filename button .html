@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: gray;
+    color: white;
+    cursor: pointer;
+  }
+
+  .active {
+    background: rgb(15, 15, 16);
+  }
+</style>
+</head>
+
+<body>
+<button id="btn1" class="btn" onclick="activate('btn1')">Button 1</button>
+<button id="btn2" class="btn" onclick="activate('btn2')">Button 2</button>
+<button id="btn3" class="btn" onclick="activate('btn3')">Button 3</button>
+
+<script>
+function activate(id) {
+  // Remove active from all buttons manually
+  document.getElementById('btn1').classList.remove('active');
+  document.getElementById('btn2').classList.remove('active');
+  document.getElementById('btn3').classList.remove('active');
+
+  // Add active to clicked button
+  document.getElementById(id).classList.add('active');
+}
+
+
+
+</script>
+
+</body>
+</html>
