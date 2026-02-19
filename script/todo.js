@@ -5,5 +5,5 @@ function addList(){
    
   array.push(name);
   console.log(array);
-  element.value ='';
+  element.value ='';  //this make become text empty
 }
