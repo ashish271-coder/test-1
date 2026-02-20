@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> upgrate Todo list</title>
+</head>
+<body>
+    <p>To do list</p>
+    <input type="text" placeholder="to do list" class="js-name">
+    <button  onclick="addList();">Add</button>
+    <div class="js-todo-list">text</div>
+
+    <script>
+        const array =['wash dishes','make dinner'];
+
+randertodolist();
+function randertodolist(){
+  let arrayHTML = '';
+for(let i=0; i<array.length; i++){
+const todo = array[i];
+const html =`<p> ${todo} <button> delete</button></p>`;
+arrayHTML += html
+
+}
+console.log(arrayHTML);
+ document.querySelector('.js-todo-list').
+ innerHTML = arrayHTML;
+}
+function addList(){
+  const element = document.querySelector('.js-name');
+  const name = element.value;
+   
+  array.push(name);
+  console.log(array);
+  element.value ='';  //this make become text empty
+  randertodolist();
+} 
+    </script>
+</body>
+</html>
