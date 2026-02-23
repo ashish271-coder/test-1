@@ -100,6 +100,17 @@ while(num < 0.5){
             duble.push(num*2);
         }
         console.log(duble);
+
+// LOOPS INSIDE FUNCATION HOW PRINT WITH RETURN
+        function dubleSecond(nums){
+            const duble =[];
+             for(let i=0; i<nums.length; i++){
+              const num =nums[i];
+            duble.push(num*2);
+        }
+        return duble        //  console.log( duble);
+        }
+    console.log(dubleSecond([10,2,3]));  // dubleSecond([10,2,3]);
     </script>
     
 </body>
