@@ -51,7 +51,7 @@ setInterval(function(){
     'make dinner',
     'wash dishis',
     'watch youtube'
-].forEach(function(name,index) {
+].forEach((name,index)=> {
     if(name==='wash dishis'){
         return;
     }
@@ -72,7 +72,7 @@ const param1 = singlepera=>{   //when we have a single perameters we csn write w
 }
     param1(5);
 
-const add =()=>{return 2+8;}
+const add =()=>  2+8; //we can write in single line  without return 
 console.log(add());
     </script>
 </body>
