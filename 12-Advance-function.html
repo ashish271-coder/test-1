@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance funcation</title>
+</head>
+<body>
+    <script>
+    function greeting(){       //function are values 
+        // console.log('hello');
+    }
+     greeting();
+     const num = 2;
+     const function1  = function (){  //here we dont need funcation name it call anomoyis funcation
+        console.log('hell0');
+     };
+    // //  console.log(function1);
+     function1();
+
+     const object1={
+         num: 1,
+         fun: function(){
+            console.log('hello 3');
+         }
+            
+     }
+     object1.fun();
+
+
+// function inside funcation
+function run(pera){
+ pera();
+}
+run(function(){
+    console.log('hello 4');
+});
+
+setTimeout(function(){
+    console.log('timeout')
+    console.log('timeout-2')
+},3000);
+console.log('nextLine');
+
+setInterval(function(){
+    console.log('interval');
+},3000);
+
+// FOREACH LOOP
+[
+    'make dinner',
+    'wash dishis',
+    'watch youtube'
+].forEach((name,index)=> {
+    if(name==='wash dishis'){
+        return;
+    }
+    console.log(name);
+    console.log(index);
+});
+
+//Arrow funcation
+    const arrowfuncation = (param)=>{
+        console.log('hello ashish');
+        console.log(param);
+        
+    }
+arrowfuncation(5);
+
+const param1 = singlepera=>{   //when we have a single perameters we csn write without brackets()
+    console.log(singlepera + 2);
+}
+    param1(5);
+
+const add =()=>  2+8; //we can write in single line  without return 
+console.log(add());
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //ARRAY
+/*
+
+    const myArray=[10,20,30];
+    console.log(myArray);
+   console.log(myArray[2]); //thsi is indexing in array  on postion 2 will print 30
+
+   myArray[2]=69;
+   console.log(myArray);
+
+   [1,'hello',true,{name: 'socks'},[1,2]]; //in js arry can be mixed 
+   console.log (typeof[1,2]);
+   console.log(Array.isArray([1,2]));
+   console.log(Array.isArray('hello'));
+
+   console.log(myArray.length);//it show how many elements in my array
+
+   myArray.push(100);   // it push element end of array
+   console.log(myArray);
+
+   myArray.splice(0,1); //splice is ysed for remove element from array in bracket 0 is indexing and 1 is num want data remove
+    console.log(myArray);
+    */
+
+        //LOOPS
+        
+    //     let i = 1;
+    //     while(i<=5)
+    // {
+    //  i++;
+    //   console.log(i);
+    // }
+   
+
+    // for(a=5; a >= 0; a--)
+    // {
+    //     console.log(a);
+    // }
+
+//an example of while with math.rando,
+/*
+let num = 0;
+while(num < 0.5){
+    num = Math.random();
+   
+}
+ console.log(num); // if we print in side {curly } it print many timesf
+ 
+ console.log('if i want 5 time')
+ for (let i = 1; i <= 5; i++) {
+    let num = 0;
+
+    while (num < 0.5) {
+        num = Math.random();
+    }
+
+    console.log(num);
+}
+*/  
+
+                           // LOOPING THROUGHT ARRAY
+        //   const todoList =[
+        //     'watch movies',
+        //     'drinke water',
+        //     'eat food'
+        //   ];  
+        //   for (let index = 0; index <= todoList.length-1; index++){ 
+    
+        //     //  console.log(todoList[index]);      //it can print by sortcut below line by chatgpt
+        //      const value=todoList[index];
+        //      console.log(value);
+        //       console.log(index);
+        //   }         
+        
+
+                             //CALCULATE TOTAL IN ARRY (ACCUMULATOR PATTERN)
+
+        const nums =[1,2,3];
+        let total = 0;
+        for(let i=0; i <nums.length; i++){
+            const num = nums[i];
+            total += num;
+        }
+            console.log(total);
+      
+        // for duble an array
+        const duble =[];
+        for(let i=0; i<nums.length; i++){
+            const num =nums[i];
+            duble.push(num*2);
+        }
+        console.log(duble);
+
+// LOOPS INSIDE FUNCATION HOW PRINT WITH RETURN
+        function dubleSecond(nums){
+            const duble =[];
+             for(let i=0; i<nums.length; i++){
+              const num =nums[i];
+            duble.push(num*2);
+        }
+        return duble        //  console.log( duble);
+        }
+    console.log(dubleSecond([10,2,3]));  // dubleSecond([10,2,3]);
+    </script>
+    
+</body>
+</html>
