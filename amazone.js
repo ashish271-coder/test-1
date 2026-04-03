@@ -1,11 +1,12 @@
-
+import {cart, addToCart} from "../data/cart.js";
+import {products} from "../data/products.js";
 let productsHTML ='';
 products.forEach((product)=>{
 productsHTML +=` <div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
               src="${product.image}">
-          </div>
+          </div>  
 
           <div class="product-name limit-text-to-2-lines">
           ${product.name}
@@ -54,32 +55,28 @@ productsHTML +=` <div class="product-container">
 });
 
 document.querySelector('.js-replace').innerHTML=
-productsHTML
-document.querySelectorAll('.js-add-buttion')
-.forEach((button)=>{
-  button.addEventListener('click',()=>{ 
-  const productId = button.dataset .productId;
-  let matchingIteam
-    cart.forEach((item)=>{
-      if(productId===item.productId){
-        matchingIteam =item
-      }
-    });
-    if(matchingIteam){
-      matchingIteam.quantity += 1;
-    }else{
-       cart.push({
-    productId:productId,
-    quantity:1
-  });
-    }
-    let cartQuentity =0;
-    cart.forEach((item)=>{
-      cartQuentity += item.quantity
+productsHTML 
+
+
+
+function updateCartquntity(){
+
+  let cartQuentity =0;
+    cart.forEach((cartitem)=>{
+      cartQuentity += cartitem.quantity
     });
     document.querySelector('.js-cart-quantity')
       .innerHTML = cartQuentity;
   console.log(cart);
+
+}
+document.querySelectorAll('.js-add-buttion')
+.forEach((button)=>{
+  button.addEventListener('click',()=>{ 
+  const productId = button.dataset .productId;
+  addToCart(productId);
+  updateCartquntity();
+  
   });
 
 });
